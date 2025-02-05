@@ -1,10 +1,10 @@
 import java.util.*;
 
-class ex1 {
+class TP1 {
     private int V;
     private LinkedList<Integer> adj[];
 
-    ex1(int v) {
+    TP1(int v) {
         V = v + 1;
         adj = new LinkedList[V];
         for (int i = 0; i < V; ++i)
@@ -15,7 +15,6 @@ class ex1 {
         adj[v].add(w);
         adj[w].add(v);
     }
-
     Boolean isReachable(int s, int d) {
         LinkedList<Integer> queue = new LinkedList<>();
         boolean visited[] = new boolean[V];
@@ -40,7 +39,7 @@ class ex1 {
     }
 
     public static void main(String args[]) {
-        ex1 _g = new ex1(7);
+        TP1 _g = new TP1(7);
         _g.addEdge(1, 2);
         _g.addEdge(2, 5);
         _g.addEdge(3, 6);
